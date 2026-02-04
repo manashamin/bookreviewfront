@@ -153,3 +153,4 @@ Cloud deployment using Render and Vercel
 Code quality analysis using SonarCloud
 
 GitHub organization and collaboration workflow
+SonarCloud analysis integrated with Pull Request checks.
