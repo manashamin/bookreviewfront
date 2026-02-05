@@ -1,175 +1,115 @@
-BookNest – Book Review Management System
-Project Overview
+Summary (BookNest – Online Book Review System)
 
-BookNest is a full-stack web application designed to manage and display book reviews in a simple, user-friendly, and scalable manner. The main goal of this project is to provide a platform where users can submit reviews for books and view existing reviews, while demonstrating real-world software development practices such as frontend–backend separation, containerization, CI/CD automation, and cloud deployment.
+This section summarizes the successful completion of all DevOps, CI/CD, and deployment-related tasks for the BookNest – Online Book Review System, a full-stack web application.
 
-The project follows a modern web application architecture, where the frontend and backend are developed and deployed independently. The frontend is built using React (JavaScript) to create a dynamic and responsive user interface, while the backend is implemented using Spring Boot to expose RESTful APIs that handle business logic and data persistence.
+Development – Frontend
 
-This project was developed not only to meet functional requirements but also to follow industry-level DevOps practices, including Dockerization, GitHub Actions, SonarCloud analysis, and deployment on cloud platforms.
-
-Why BookNest and Why This Architecture
-
-The BookNest application uses React for the frontend because React allows building reusable components, efficient state management, and smooth user interactions without reloading pages. This makes the application faster, more responsive, and easier to maintain compared to traditional multi-page applications.
-The frontend and backend are kept completely separate so that:
-The frontend can evolve independently without affecting backend logic
-The backend can be reused for other clients (mobile apps, future services, etc.)
-Deployment and scaling become easier
-Real-world enterprise architecture is followed
-The backend uses Spring Boot to expose REST APIs that handle review creation, updating, retrieval, and deletion. Communication between frontend and backend happens using HTTP requests, making the system loosely coupled and scalable.
-Technology Stack
-Frontend
-React (JavaScript)
-
-Component-based UI design
-
-Deployed on Vercel
-
-Backend
-
-Spring Boot (Java)
-
-RESTful API architecture
-
-H2 in-memory database
-
-Deployed on Render
-
-DevOps and Tools
-
-Docker
-
-GitHub Organizations
-
-GitHub Actions (CI/CD)
-
-SonarCloud (static code analysis)
-
-GitHub Pull Requests and Action Triggers
-
-Application Architecture
-
-React frontend sends HTTP requests to Spring Boot REST APIs
-
-Spring Boot backend processes requests and interacts with the database
-
-Docker is used to containerize both frontend and backend applications
-
-sonar-pr-check
-### `npm run build` success
-
-Creating an optimized production build...
-Compiled successfully.
-
-File sizes after gzip:
-
-  62.01 kB  build\static\js\main.2c8c985a.js
-  1.76 kB   build\static\js\453.0a977dce.chunk.js
-  792 B     build\static\css\main.489d9043.css
-
-The project was built assuming it is hosted at /.
-You can control this with the homepage field in your package.json.
-
-The build folder is ready to be deployed.
-You may serve it with a static server:
-
-  npm install -g serve
-  serve -s build
-
-Each service is deployed independently on cloud platforms
-
-This architecture improves maintainability, scalability, and real-world applicability.
-
-Core Features
+The frontend of the application was successfully developed using React (JavaScript).
+It provides a clean and user-friendly interface where users can:
 
 Add new book reviews
+View existing reviews
+Edit and delete reviews
 
-View all submitted book reviews
+The frontend communicates with the backend using REST APIs and was tested thoroughly during development.
 
-REST API–based backend services
+Development – Backend
 
-React-based single-page application frontend
+The backend was successfully developed using Spring Boot.
+It handles:
 
-Backend data persistence using H2 database
+REST API requests
 
-Frontend–backend integration using HTTP APIs
+Business logic
+Database interactions using JPA
+Spring Security was configured to manage application security and CORS handling, ensuring smooth communication between frontend and backend.
 
-Docker Implementation
+Build Project (Frontend & Backend)
 
-Separate Dockerfiles created for frontend and backend
+Both frontend and backend projects were successfully built and verified.
 
-Docker images built successfully for both services
+Frontend Build
+The frontend production build was generated successfully using:
+npm run build
 
-Containers tested locally before deployment
+Backend Build
+The backend build was completed successfully using:
+mvn clean verify
 
-Demonstrates container-based application deployment
 
-Deployment Details
+Screenshots of build outputs are attached below:
+Frontend Build:<img width="1920" height="1080" alt="frontend-build" src="https://github.com/user-attachments/assets/f49d7c39-fa71-4088-a7d4-d00bfe3b22d0" />
+Backend Build: <img width="1920" height="1080" alt="backend-build" src="https://github.com/user-attachments/assets/933203db-c9b9-4fea-8b3e-b376de64f14f" />
 
-Backend application deployed on Render
+Sonar Analysis
 
-Frontend application deployed on Vercel
+SonarCloud analysis was successfully performed to ensure:
+Code quality
+Maintainability
+Reliability
+Detection of bugs and code smells
+Quality gates were checked during pull requests to maintain code standards.
 
-Live frontend communicates with deployed backend APIs
+Screenshots of SonarCloud reports are attached below:<img width="1920" height="1080" alt="sonarqubecloud" src="https://github.com/user-attachments/assets/e7b189c9-dc15-4b38-9df4-8194f6553fa0" />
 
-CI/CD and Code Quality
 
-GitHub Actions configured to automatically run builds on code push
+Frontend Sonar Analysis: <img width="1920" height="1080" alt="sonarfront" src="https://github.com/user-attachments/assets/10e7bf21-9f17-4bda-819c-a15f2bf37e3a" />
 
-Pull request–based workflow followed
+Backend Sonar Analysis: <img width="1920" height="1080" alt="sonarback" src="https://github.com/user-attachments/assets/7898d6cf-540b-4466-b721-b07c54795084" />
 
-SonarCloud integrated for:
+Proper Pull Request Workflow
+A proper GitHub pull request workflow was followed for both frontend and backend repositories.
+Pull requests were created successfully
+SonarCloud checks were triggered
+Pull requests were reviewed and merged
+This demonstrates correct GitHub collaboration and version control practices.
 
-Code quality checks
+Docker Image Build (Frontend & Backend)
+Both frontend and backend applications were successfully containerized using Docker.
+Dockerfiles were created
+Docker images were built successfully
+Containers ensure environment consistency and portability
 
-Bug detection
+Screenshots of Docker images are attached below: <img width="1920" height="1080" alt="dockerimages" src="https://github.com/user-attachments/assets/b1a79ef9-125d-48ec-900e-be4cbc3573a8" />
 
-Maintainability analysis
+Vercel Deployment
 
-CI/CD pipeline ensures stable and reliable builds
+The frontend was successfully deployed on Vercel, enabling continuous deployment directly from GitHub.
 
-Repository and Organization Management
+Deployment Link:
+https://www.onlinebookreviewsystem-manasha.me
 
-Project repositories moved to a GitHub Organization
+Vercel Deployment with Custom Domain
+A custom domain was purchased using GitHub Student Developer Pack (Namecheap) and successfully connected to the Vercel deployment.
+This makes the application production-ready with a professional domain name.
 
-Proper role and access management applied
+Custom Domain Link:
+https://www.onlinebookreviewsystem-manasha.me
 
-Feature development handled using branches and pull requests
+Backend Deployment (Render)
+The backend was successfully deployed on Render.
+Runs on embedded Tomcat server
+Exposes REST APIs
 
-Clean and professional repository structure maintained
+Connected with frontend securely using CORS configuration
+Backend API Link:
+https://bookreviewback-fywe.onrender.com/api/reviews
 
-Project Status
+Project Demo
+I am fully prepared for the project demo and will demonstrate: Frontend features,Backend API working,Dockerized application,Deployed live system
+during the DevOps class.
 
-Development completed
+Presentation in English
+I am prepared to deliver the complete project presentation in English, explaining:,System architecture,Development process,CI/CD pipeline,Deployment strategy
+clearly during the DevOps class.
 
-Docker images created
+GitHub Student Pack Demo
+I have successfully activated GitHub Student Developer Pack benefits, including: Namecheap domain,GitHub Pro features
+I am ready to demonstrate this during the DevOps class.
 
-Cloud deployment completed
+Explaining Challenges Faced
+I am prepared to explain all challenges faced during: Frontend–backend integration,CORS configuration,Dockerization,CI/CD pipeline setup,Cloud deployment,Domain and DNS configuration
 
-CI/CD pipelines working
+and how each issue was resolved.Frontend Build Screenshot
 
-Code quality checks integrated
-
-Learning Outcomes
-
-Full-stack web application development
-
-React-based frontend architecture
-
-RESTful API development using Spring Boot
-
-Docker containerization
-
-CI/CD pipeline implementation
-
-Cloud deployment using Render and Vercel
-
-Code quality analysis using SonarCloud
-
-GitHub organization and collaboration workflow
- main
-SonarCloud analysis integrated with Pull Request checks.
-## SonarCloud Pull Request Analysis
-
-SonarCloud is integrated with GitHub Actions and automatically analyzes code on every Pull Request.
-Quality gate results and code issues are visible directly in the Pull Request view.
-SonarCloud analysis enabled
+Backend Build Screenshot
