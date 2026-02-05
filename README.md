@@ -180,3 +180,4 @@ SonarCloud analysis integrated with Pull Request checks.
 
 SonarCloud is integrated with GitHub Actions and automatically analyzes code on every Pull Request.
 Quality gate results and code issues are visible directly in the Pull Request view.
+SonarCloud analysis enabled
